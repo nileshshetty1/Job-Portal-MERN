@@ -6,7 +6,7 @@ import Myjobs from "../Pages/Myjobs";
 import SalaryPage from "../Pages/SalaryPage";
 import Updatejobs from "../Pages/Updatejobs";
 import Login from "../components/Login";
-import JobDetails from "../Pages/Jobdetails";
+import JobDetails from "../Pages/JobDetails";
 
 const router = createBrowserRouter([
   {
