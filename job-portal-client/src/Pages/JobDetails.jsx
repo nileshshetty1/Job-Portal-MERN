@@ -5,7 +5,8 @@ const JobDetails = () => {
   const { id } = useParams();
   const [job, setJob] = useState([]);
   useEffect(() => {
-    fetch(`https://localhost:3000/all-jobs/${id}`)
+    // fetch(`https://localhost:3000/all-jobs/${id}`)
+    fetch(`/jobs.json/all-jobs/${id}`)
       .then((res) => res.json)
       .then((data) => setJob(data));
   }, []);
