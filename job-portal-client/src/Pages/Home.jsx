@@ -6,6 +6,9 @@ import Card from "../components/Card";
 import Sidebar from "../Sidebar/Sidebar";
 import Newsletter from "../components/Newsletter";
 
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
+
 const Home = () => {
   const [selectCategory, setSelectCategory] = useState(null);
   const [jobs, setJobs] = useState([]);
@@ -103,6 +106,43 @@ const Home = () => {
   };
 
   const result = filteredData(jobs, selectCategory, query);
+
+  // ?????????????????????????????????????????????????????????????????????
+  const driverObj = driver({
+    showProgress: true,
+    steps: [
+      {
+        element: "#first",
+        popover: {
+          title: "NavBar",
+          description: "check for salary,Search,Post,Applied-jobs",
+        },
+      },
+      {
+        element: "#second",
+        popover: {
+          title: "Login",
+          description: "Login to find make your search even better",
+        },
+      },
+      {
+        element: "#third",
+        popover: {
+          title: "Search jobs here",
+          description: "Goodluck looking for your dream job👌",
+        },
+      },
+      {
+        element: "#fourth",
+        popover: {
+          title: "Filter",
+          description: "Filter out the best jobs for you🤯",
+        },
+      },
+    ],
+  });
+  driverObj.drive();
+  // ??????????????????????????????????????????????????????????????????????
 
   return (
     <div className="text-blue">

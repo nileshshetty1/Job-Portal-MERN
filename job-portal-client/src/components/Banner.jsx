@@ -10,7 +10,10 @@ const Banner = ({ query, handleInputChange }) => {
         Thousand's of job's listed every day
       </p>
       <form>
-        <div className="flex justify-start md:flex-row flex-col md:gap-0 gap-4">
+        <div
+          className="flex justify-start md:flex-row flex-col md:gap-0 gap-4"
+          id="third"
+        >
           <div className="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 md:w-1/2 w-full">
             <input
               type="text"

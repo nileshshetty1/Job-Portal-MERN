@@ -6,7 +6,7 @@ import WorkExperience from "./WorkExperience";
 import EmploymentType from "./EmploymentType";
 const Sidebar = ({ handleChange, handleClick }) => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5" id="fourth">
       <h3 className="text-lg font-semibold mb-2">Filters</h3>
       <Location handleChange={handleChange} />
       <Salary handleChange={handleChange} handleClick={handleClick} />

@@ -20,7 +20,7 @@ const Navbar = () => {
           <span>CareerBoost.com</span>
         </a>
         {/* {nav items for large devices} */}
-        <ul className="hidden md:flex gap-12">
+        <ul className="hidden md:flex gap-12" id="first">
           {navItems.map(({ path, title }) => (
             <li key={path} className="text-base text-primary">
               <NavLink
@@ -34,7 +34,10 @@ const Navbar = () => {
         </ul>
 
         {/* signup and login button */}
-        <div className="text-base text-primary font-medium space-x-5 hidden lg:block">
+        <div
+          className="text-base text-primary font-medium space-x-5 hidden lg:block"
+          id="second"
+        >
           <Link to="/login" className="py-2 px-5 border rounded">
             Login
           </Link>
