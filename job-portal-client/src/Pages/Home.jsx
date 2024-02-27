@@ -144,43 +144,44 @@ const Home = () => {
   //   });
   //   driverObj.drive();
   // });
-
-  window.addEventListener("load", () => {
-    const driverObj = driver({
-      showProgress: true,
-      steps: [
-        {
-          element: "#first",
-          popover: {
-            title: "NavBar",
-            description: "Check for salary, Search, Post, Applied-jobs",
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      const driverObj = driver({
+        showProgress: true,
+        steps: [
+          {
+            element: "#first",
+            popover: {
+              title: "NavBar",
+              description: "Check for salary, Search, Post, Applied-jobs",
+            },
           },
-        },
-        {
-          element: "#second",
-          popover: {
-            title: "Login",
-            description: "Login to make your search even better",
+          {
+            element: "#second",
+            popover: {
+              title: "Login",
+              description: "Login to make your search even better",
+            },
           },
-        },
-        {
-          element: "#third",
-          popover: {
-            title: "Search jobs here",
-            description: "Good luck looking for your dream job👌",
+          {
+            element: "#third",
+            popover: {
+              title: "Search jobs here",
+              description: "Good luck looking for your dream job👌",
+            },
           },
-        },
-        {
-          element: "#fourth",
-          popover: {
-            title: "Filter",
-            description: "Filter out the best jobs for you🤯",
+          {
+            element: "#fourth",
+            popover: {
+              title: "Filter",
+              description: "Filter out the best jobs for you🤯",
+            },
           },
-        },
-      ],
+        ],
+      });
+      driverObj.drive();
     });
-    driverObj.drive();
-  });
+  }, []);
 
   // ??????????????????????????????????????????????????????????????????????
 
